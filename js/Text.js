@@ -32,20 +32,13 @@ function RESstatus() {
 
 
 function closeText() {
-    if (document.getElementById('TextBox').style.display == 'flex' && document.getElementById('playr-box').style.display == 'flex') {
 
-        document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
+    document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
 
-        document.getElementById('playr-box').style.display = 'flex';
-        document.getElementById('TextBox').style.display = 'none';
-    } else {
-        document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
-
-        document.getElementById('header').style.display = 'flex';
-        document.getElementById('main').style.display = 'block';
-        document.getElementById('playr-box').style.display = 'none';
-        document.getElementById('TextBox').style.display = 'none';
-    }
+    document.getElementById('header').style.display = 'flex';
+    document.getElementById('main').style.display = 'block';
+    document.getElementById('playr-box').style.display = 'none';
+    document.getElementById('TextBox').style.display = 'none';
 }
 
 
