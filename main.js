@@ -28,6 +28,9 @@ function play() {
 
     document.getElementById('play').style.display = 'block'
     document.getElementById('pause').style.display = 'none'
+
+    document.getElementById('play-max').style.display = 'block'
+    document.getElementById('pause-max').style.display = 'none'
 }
 
 function pause() {
@@ -37,6 +40,9 @@ function pause() {
 
     document.getElementById('play').style.display = 'none'
     document.getElementById('pause').style.display = 'block'
+
+    document.getElementById('play-max').style.display = 'none'
+    document.getElementById('pause-max').style.display = 'block'
 }
 
 
@@ -89,6 +95,11 @@ InputReg.addEventListener('input', ()=>{
     // InputReg.max = Math.floor(playr.duration);
 });
 
+document.getElementById('time-max-Two').addEventListener('input', ()=>{
+    audio.currentTime = Math.floor(document.getElementById('time-max-Two').value)
+});
+
+
 function debug() {
     console.log(audio.currentTime)
     console.log(audio.duration)
@@ -102,6 +113,11 @@ function updateProgress(e) {
         localStorage.setItem('audio_time_max', Math.floor(InputReg.max))
 
         document.getElementById('time_line').innerHTML = Math.floor(audio.currentTime) + '/' + Math.floor(audio.duration);
+        document.getElementById('time_line_playr_Two').innerHTML = Math.floor(audio.currentTime) + '/' + Math.floor(audio.duration);
+
+
+        // document.getElementById('time-max-Two').value = Math.floor(audio.currentTime)
+        // document.getElementById('time-max-Two').max = Math.floor(audio.duration)
 
         InputReg.value = audio.currentTime
         InputReg.max = Math.floor(audio.duration)

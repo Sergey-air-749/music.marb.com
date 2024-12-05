@@ -101,11 +101,11 @@ main {
     justify-content: start;
     align-items: center;
 
-    /* background-color: rgb(26, 26, 26); */
+    background-color: rgb(26, 26, 26);
     border-radius: 15px;
 
     padding: 15px;
-    /* margin: 10px; */
+    margin: 10px;
 }
 
 .card img{

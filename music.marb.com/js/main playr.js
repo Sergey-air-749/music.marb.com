@@ -62,6 +62,8 @@ function text() {
     // document.getElementById('main').style.display = 'none';
     // document.getElementById('Text').style.display = 'block';
 
+
+    
     if (document.getElementById('header').style.display == 'none' || document.getElementById('main').style.display == 'none' || localStorage.getItem('audio_name') == null) {
 
         document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
@@ -78,9 +80,75 @@ function text() {
 
         document.getElementById('header').style.display = 'none';
         document.getElementById('main').style.display = 'none';
+
         document.getElementById('TextBox').style.display = 'flex';
 
         // document.getElementById('Text').style.display = 'block';
 
     }
 }
+
+
+
+
+
+
+function playr() {
+    if (document.getElementById('header').style.display == 'none' || document.getElementById('main').style.display == 'none' || localStorage.getItem('audio_name') == null) {
+
+        document.getElementById('header').style.display = 'flex';
+        document.getElementById('main').style.display = 'block';
+        document.getElementById('TextBox').style.display = 'none';
+
+        // document.getElementById('Text').style.display = 'none';
+
+    } else if (document.getElementById('header').style.display == 'flex') {
+
+        document.getElementById('header').style.display = 'none';
+        document.getElementById('main').style.display = 'none';
+        document.getElementById('TextBox').style.display = 'none';
+
+        document.getElementById('playr-box').style.display = 'flex';
+        document.getElementById('footer-min-playr').style.display = 'none';
+
+        // document.getElementById('Text').style.display = 'block';
+
+    }
+}
+
+
+
+
+
+function share_audio() {
+    const shareData = {
+        title: "MARB Music",
+        url: localStorage.getItem('audio_name_share'),
+    };
+
+    navigator.share(shareData);
+}
+
+
+function playrRestart() {
+    document.getElementById('cover-orign').src = localStorage.getItem('audio_icon_max');
+    // document.getElementById('cover-blur').src = localStorage.getItem('audio_icon_max');
+
+    document.getElementById('audio_name_playr').innerHTML = localStorage.getItem('audio_name')
+    document.getElementById('audio_after_playr').innerHTML = localStorage.getItem('audio_after')
+    document.getElementById('playr-box').style.backgroundColor = localStorage.getItem('alibom_color');
+}
+
+function closePlayr() {
+    
+    document.getElementById('header').style.display = 'flex';
+
+    document.getElementById('main').style.display = 'block';
+    document.getElementById('TextBox').style.display = 'none';
+
+    document.getElementById('playr-box').style.display = 'none';
+    document.getElementById('footer-min-playr').style.display = 'flex';
+
+}
+
+playrRestart()

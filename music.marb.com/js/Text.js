@@ -32,11 +32,20 @@ function RESstatus() {
 
 
 function closeText() {
-    document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
+    if (document.getElementById('TextBox').style.display == 'flex' && document.getElementById('playr-box').style.display == 'flex') {
 
-    document.getElementById('header').style.display = 'flex';
-    document.getElementById('main').style.display = 'block';
-    document.getElementById('TextBox').style.display = 'none';
+        document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
+
+        document.getElementById('playr-box').style.display = 'flex';
+        document.getElementById('TextBox').style.display = 'none';
+    } else {
+        document.getElementById('Text-img').src = '/music.marb.com/img/Text.svg';
+
+        document.getElementById('header').style.display = 'flex';
+        document.getElementById('main').style.display = 'block';
+        document.getElementById('playr-box').style.display = 'none';
+        document.getElementById('TextBox').style.display = 'none';
+    }
 }
 
 
@@ -78,22 +87,6 @@ function Restart() {
     audio2.addEventListener('timeupdate', updateProgress)
 }
 
-
-function dataReSet() {
-    localStorage.setItem('alibom_color', 'rgb(187, 76, 156)')
-    localStorage.setItem('alibom_name',	'POX VAWË 0.5')
-    localStorage.setItem('audio_after', 'OG Buda')
-    localStorage.setItem('audio_icon', '/music.marb.com/img/100x100 (3).jpg')
-    localStorage.setItem('audio_icon_max', '/music.marb.com/img/m1000x1000 (1).jpg')
-    localStorage.setItem('audio_name', 'Из-за К...')
-    localStorage.setItem('audio_play', 0)
-    localStorage.setItem('audio_time', 86)
-    localStorage.setItem('audio_time_max', 145)
-    localStorage.setItem('playr', 'http://127.0.0.1:5500/music.marb.com/music/OG%20Buda/23115.mp3')
-    localStorage.setItem('token', 245354)
-}
-
-
 function updateProgress(e) {
 
     if (localStorage.getItem('audio_time') != null || '0' || NaN) {
@@ -107,6 +100,10 @@ function updateProgress(e) {
             
             if (content[time] != undefined) {
                 document.getElementById('text').innerHTML = content[time]
+            }
+
+            if (localStorage.getItem('audio_time') == localStorage.getItem('audio_time_max')) {
+                document.getElementById('text').innerHTML = '';
             }
     
         }

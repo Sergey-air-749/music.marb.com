@@ -126,7 +126,7 @@ function share() {
 }
 
 function color() {
-    localStorage.setItem('alibom_color', 'rgb(80 176 255)')
+    localStorage.setItem('alibom_color', '#3c93ff;')
 }
 
 
