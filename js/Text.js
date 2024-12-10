@@ -37,7 +37,6 @@ function closeText() {
 
     document.getElementById('header').style.display = 'flex';
     document.getElementById('main').style.display = 'block';
-    document.getElementById('playr-box').style.display = 'none';
     document.getElementById('TextBox').style.display = 'none';
 }
 

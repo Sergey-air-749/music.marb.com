@@ -96,26 +96,3 @@ function debug() {
 //     //     localStorage.setItem('audio_time_max', InputReg.max)
 //     // }
 // }
-
-
-function updateProgress(e) {
-
-    if (localStorage.getItem('audio_time') == null || '0' || NaN) {
-
-        localStorage.setItem('audio_time', Math.floor(InputReg.value))
-        localStorage.setItem('audio_time_max', Math.floor(InputReg.max))
-
-        document.getElementById('time_line').innerHTML = Math.floor(audio.currentTime) + '/' + Math.floor(audio.duration);
-
-        InputReg.value = audio.currentTime
-        InputReg.max = Math.floor(audio.duration)
-
-    } else {
-
-    }
-
-}
-
-
-audio.addEventListener('timeupdate', updateProgress)
-

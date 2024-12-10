@@ -84,8 +84,14 @@ function Close() {
     document.getElementById('Text').style.display = 'none';
 }
 
+function UpData() {
+    document.getElementById('windowe-new').style.display = 'flex'
+}
 
 
+function closeUpData() {
+    document.getElementById('windowe-new').style.display = 'none'
+}
 
 
 
@@ -95,9 +101,9 @@ InputReg.addEventListener('input', ()=>{
     // InputReg.max = Math.floor(playr.duration);
 });
 
-document.getElementById('time-max-Two').addEventListener('input', ()=>{
-    audio.currentTime = Math.floor(document.getElementById('time-max-Two').value)
-});
+// document.getElementById('time-max-Two').addEventListener('input', ()=>{
+//     audio.currentTime = Math.floor(document.getElementById('time-max-Two').value)
+// });
 
 
 function debug() {
@@ -105,28 +111,5 @@ function debug() {
     console.log(audio.duration)
 }
 
-function updateProgress(e) {
 
-    if (localStorage.getItem('audio_time') == null || '0' || NaN) {
-
-        localStorage.setItem('audio_time', Math.floor(InputReg.value))
-        localStorage.setItem('audio_time_max', Math.floor(InputReg.max))
-
-        document.getElementById('time_line').innerHTML = Math.floor(audio.currentTime) + '/' + Math.floor(audio.duration);
-        document.getElementById('time_line_playr_Two').innerHTML = Math.floor(audio.currentTime) + '/' + Math.floor(audio.duration);
-
-
-        // document.getElementById('time-max-Two').value = Math.floor(audio.currentTime)
-        // document.getElementById('time-max-Two').max = Math.floor(audio.duration)
-
-        InputReg.value = audio.currentTime
-        InputReg.max = Math.floor(audio.duration)
-
-    } else {
-
-    }
-
-}
-
-audio.addEventListener('timeupdate', updateProgress)
 

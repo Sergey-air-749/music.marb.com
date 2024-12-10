@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/music.marb.com/css/alobomstyle.css">
     <link rel="stylesheet" href="/music.marb.com/css/playr.css">
     <link rel="stylesheet" href="/music.marb.com/css/Text.css">
+    <link rel="stylesheet" href="/music.marb.com/css/BigPlayr.css">
 
     <link rel="icon" type="image/png" href="/music.marb.com/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/music.marb.com/favicon/favicon.svg" />
@@ -159,6 +160,70 @@
 
         </main>
 
+
+
+        
+        <div class="big-playr" id="big-playr" style="display: none;">
+
+            <!-- <div class="big-playr-content" id="big-playr-content"> -->
+
+                <!-- <div class="close-control"></div> -->
+
+                <div class="big-playr-audio">
+
+                    <div class="close-control">
+                        <button type="button" class="ButtonClose" onclick="PlayrClose()">
+                            <img src="/music.marb.com/img/close.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="cover">
+                        <img src="/music.marb.com/img/m1000x1000.jpeg" class="cover-img" id="cover-img" alt="">
+                    </div>
+
+                    <div class="playr-audio-info">
+                        <h3 id="trek_name" class="trek_name">liga la sosa</h3>
+
+                        <span id="trek_ispolniteli" class="trek_ispolniteli">Платина</span>
+                    </div>
+
+                    <div class="playr-audio-timeline">
+                        <span id="activ-time" class="activ-time">12</span>
+                        
+                        <input type="range" value="0" class="timeline" name="timeline" id="timeline">
+
+                        <span id="max-time" class="max-time">126</span>
+                    </div>
+
+                    <div class="playr-audio-control">
+
+                        <button class="buttonAC_min" id="" onclick="povtor()">
+                            <img src="/music.marb.com/img/povtor.svg" alt="" id="povtor" class="buttonAC_min povtor">    
+                        </button>
+
+
+                        <div class="buttonAC" id="">
+                            <img id="pause-max" src="/music.marb.com/img/pause-max.svg"onclick="play()" alt="" id="pause-max" class="buttonAC pause">    
+                            <img id="play-max" src="/music.marb.com/img/play-max.svg" onclick="pause()" alt="" id="play-max" class="buttonAC play">    
+                        </div>
+
+
+                        <button class="buttonAC_min" id="" onclick="text()">
+                            <img src="/music.marb.com/img/Text.svg"  alt="" id="" class="buttonAC_min text">    
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            <!-- </div> -->
+
+        </div>
+
+
+
+
         <div class="TextBox alibom" id="TextBox" style="display: none;">
 
             <input type="text" id="full-Text" hidden>
@@ -202,7 +267,7 @@
             </div>
         </div>
 
-        <footer>
+        <footer id="footer-min-playr">
 
             <input type="range" value="0" class="time" name="" id="time">
 
@@ -210,9 +275,11 @@
                 <audio src="" id="playr" controls hidden></audio>
 
                 <div class="trak-info">
-                    <img src="/music.marb.com/img/notaudio.svg" class="playr_img" id="playr_img" alt="">
+                    <img src="/music.marb.com/img/notaudio.svg" onclick="BigPlayr()" class="playr_img" id="playr_img" alt="">
 
-                    <div class="text">
+                    <!-- onclick="playr()" -->
+
+                    <div class="text" >
                         <h3 id="audio_name">Нет данных</h3>    
                         <span id="audio_after"></span>
                     </div>
@@ -222,7 +289,7 @@
                 <span id="time_line" class="time_line">12/126</span>
 
                 <div class="button"  style="display: flex;" >
-                    <img id="Text-img" class="Text"onclick="text()" src="/music.marb.com/img/Text.svg" alt="">
+                    <img id="Text-img" class="Text" onclick="text()" src="/music.marb.com/img/Text.svg" alt="">
 
                     <img id="pause" class="play_pause" onclick="play()" src="/music.marb.com/img/pause.svg" alt="">
                     <img id="play" class="play_pause" style="display: none;" onclick="pause()" src="/music.marb.com/img/play.svg" alt="">
@@ -234,9 +301,10 @@
     </div>
 
     <script src="main.js"></script>
-    <script src="/music.marb.com/js/main playr.js"></script>
+    <script src="/music.marb.com/js/mainPlayr.js"></script>
 
 
+    <script src="/music.marb.com/js/BigPlayr.js"></script>
     <script src="/music.marb.com/js/Text.js"></script>
     
 </body>

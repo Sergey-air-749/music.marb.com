@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/music.marb.com/css/playr.css">
-    <link rel="stylesheet" href="/music.marb.com/css/Text.css">
+    <link rel="stylesheet" href="/music.marb.com/css/BigPlayr.css">
     <!-- <link rel="stylesheet" href="/music.marb.com/Text/style.css"> -->
 
     <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
@@ -56,7 +56,7 @@
 
             <div class="cards">
 
-                <h2 class="main-h">Что можно послушать <span>Beta: v1.5.7</span> </h2>
+                <h2 class="main-h">Что можно послушать <span class="version" onclick="UpData()">Beta: v1.5.7</span> </h2>
 
                 <div class="card">
                     <img src="/music.marb.com/img/377dc37df17523873990506e560f6e7b.1000x1000x1 (1) (Пользовательское).png" alt="">
@@ -169,12 +169,136 @@
                     </div>
                 </div>
 
+                <div class="card">
+                    <img src="/music.marb.com/img/m1000x1000Крем (Пользовательское).jpeg" alt="">
+
+                    <div class="info">
+                        <a href="/music.marb.com/alibom/Крем/index.html"> 
+                            <h3>Крем</h3> 
+                        </a>
+
+                        <span>Альбом • 3TERNITY, хочуспать</span>
+                    </div>
+                </div>
+
                 <div class="block" id="block" style="display: block;">
                 
                 </div>
             </div>
 
         </main>
+
+
+        <div class="windowe-new" id="windowe-new" style="display: none;">
+
+            <div class="new">
+
+                <div class="updata" id="updata">
+                    <div class="head-info">
+                        <h2>Что нового?</h2>
+
+                        <button onclick="closeUpData()">
+                            <svg width="25.000000" height="25.000000" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                        Created with Pixso.
+                                </desc>
+                                <defs>
+                                    <clipPath id="clip28_1">
+                                        <rect id="фрейм 18" width="100.000000" height="100.000000" fill="white" fill-opacity="0"/>
+                                    </clipPath>
+                                </defs>
+                                <rect id="фрейм 18" width="100.000000" height="100.000000" fill="#FFFFFF" fill-opacity="0"/>
+                                <g clip-path="url(#clip28_1)">
+                                    <line id="Линия 1" x1="14.644661" y1="85.355347" x2="85.355347" y2="14.644653" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="10.000000"/>
+                                    <line id="Линия 1" x1="14.644661" y1="14.644653" x2="85.355347" y2="85.355331" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="10.000000"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="info-data">
+                        <span class="v">v1.5.7</span>
+                        <span>11 сентибря</span>
+                    </div>
+
+                    <p>
+                        Добавили текст для песен:
+
+                        <li>Платина - liga la sosa,</li>
+                        <li>OG Buda - Из-за К...,</li>
+                        <li>FACE - Маленькая тёлка,</li>
+                        <li>3TERNITY - Купе,</li>
+                        <li>3TERNITY - Крик,</li>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="big-playr" id="big-playr" style="display: none;">
+
+            <!-- <div class="big-playr-content" id="big-playr-content"> -->
+
+                <!-- <div class="close-control"></div> -->
+
+                <div class="big-playr-audio">
+
+                    <div class="close-control">
+                        <button type="button" class="ButtonClose" onclick="PlayrClose()">
+                            <img src="/music.marb.com/img/close.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="cover">
+                        <img src="/music.marb.com/img/m1000x1000.jpeg" class="cover-img" id="cover-img" alt="">
+                    </div>
+
+                    <div class="playr-audio-info">
+                        <h3 id="trek_name" class="trek_name">liga la sosa</h3>
+
+                        <span id="trek_ispolniteli" class="trek_ispolniteli">Платина</span>
+                    </div>
+
+                    <div class="playr-audio-timeline">
+                        <span id="activ-time" class="activ-time">12</span>
+                        
+                        <input type="range" value="0" class="timeline" name="timeline" id="timeline">
+
+                        <span id="max-time" class="max-time">126</span>
+                    </div>
+
+                    <div class="playr-audio-control">
+
+                        <button class="buttonAC_min" id="" onclick="povtor()">
+                            <img src="/music.marb.com/img/povtor.svg" alt="" id="povtor" class="buttonAC_min povtor">    
+                        </button>
+
+
+                        <div class="buttonAC" id="">
+                            <img id="pause-max" src="/music.marb.com/img/pause-max.svg"onclick="play()" alt="" id="pause-max" class="buttonAC pause">    
+                            <img id="play-max" src="/music.marb.com/img/play-max.svg" onclick="pause()" alt="" id="play-max" class="buttonAC play">    
+                        </div>
+
+
+                        <button class="buttonAC_min" id="" onclick="text()">
+                            <img src="/music.marb.com/img/Text.svg"  alt="" id="" class="buttonAC_min text">    
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            <!-- </div> -->
+
+        </div>
+
+
+
 
         <!-- <iframe id="Text" style="display: none;" src="/music.marb.com/Text/index.html?AName=NIGHT B3FORE" frameborder="0"></iframe> -->
 
@@ -248,8 +372,6 @@
 
 
 
-
-
         <footer id="footer-min-playr">
 
             <input type="range" value="0" class="time" name="" id="time">
@@ -258,9 +380,11 @@
                 <audio src="" id="playr" controls hidden></audio>
 
                 <div class="trak-info">
-                    <img src="/music.marb.com/img/notaudio.svg" class="playr_img" id="playr_img" alt="">
+                    <img src="/music.marb.com/img/notaudio.svg" onclick="BigPlayr()" class="playr_img" id="playr_img" alt="">
 
-                    <div class="text"  onclick="playr()">
+                    <!-- onclick="playr()" -->
+
+                    <div class="text" >
                         <h3 id="audio_name">Нет данных</h3>    
                         <span id="audio_after"></span>
                     </div>
@@ -284,9 +408,10 @@
     </div>
 
     <script src="main.js"></script>
-    <script src="/music.marb.com/js/main playr.js"></script>
+    <script src="/music.marb.com/js/mainPlayr.js"></script>
 
 
+    <script src="/music.marb.com/js/BigPlayr.js"></script>
     <script src="/music.marb.com/js/Text.js"></script>
     <!-- <script src="/music.marb.com/Text/main.js"></script> -->
 

@@ -74,13 +74,6 @@ header {
 } */
 
 
-main h2 span{
-    color: #898989;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-}
-
 main {
     padding-top: 100px;
 }
@@ -206,6 +199,115 @@ footer {
         align-items: center;
     }
 } */
+
+
+
+
+
+
+
+
+
+.windowe-new {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* overflow: hidden; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #00000070;
+    backdrop-filter: blur(20px);
+}
+
+.new {
+
+    background-color: #212121;
+    border: 1px solid #3c3c3c;
+    /* backdrop-filter: blur(50px); */
+    border-radius: 20px;
+
+    width: 350px;
+    height: 350px;
+
+    margin-bottom: 60px;
+}
+
+.updata {
+    padding: 15px;
+}
+
+.updata .head-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+
+
+.updata li {
+    font-size: 18px;
+    color: #8f8f8f;
+}
+
+.updata p {
+    font-size: 18px;
+    color: #8f8f8f;
+}
+
+
+
+
+.info-data {
+    display: flex;
+    flex-direction: column;
+
+    color: #8f8f8f;
+    gap: 5px;
+
+    padding: 0px;
+    padding-bottom: 20px;
+} 
+
+.info-data .v{
+    color: #ffffff;
+} 
+
+
+.updata .head-info button {
+    background: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+.version {
+    color: #898989;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.version:hover {
+    color: #6e6e6e;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
 
