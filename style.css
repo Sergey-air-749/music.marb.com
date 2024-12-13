@@ -28,6 +28,11 @@ body {
 }
 
 
+.time_line {
+    font-size: 16px;
+    color: #7b7b7b;
+}
+
 
 iframe {
     width: 100%;
@@ -257,6 +262,10 @@ footer {
 }
 
 .updata p {
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
     font-size: 18px;
     color: #8f8f8f;
 }

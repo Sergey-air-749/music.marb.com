@@ -86,11 +86,13 @@ function Close() {
 
 function UpData() {
     document.getElementById('windowe-new').style.display = 'flex'
+    document.getElementById('block').style.display = 'none'
 }
 
 
 function closeUpData() {
     document.getElementById('windowe-new').style.display = 'none'
+    document.getElementById('block').style.display = 'flex'
 }
 
 

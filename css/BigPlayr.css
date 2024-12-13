@@ -38,7 +38,7 @@
 
 .big-playr-audio {
 
-    width: 100%;
+    width: 50%;
     height: 100vh;
 
     /* padding: 15px; */
@@ -92,8 +92,12 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between;
     
+    gap: 10px; */
+
+
+    justify-content: center;
     gap: 10px;
 }
 
@@ -141,7 +145,7 @@
 .playr-audio-info {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
 
     gap: 7px;
@@ -220,4 +224,34 @@
 
 .pause {
 
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .big-playr-audio {
+        width: 100%;
+    }
+
+    .playr-audio-info {
+        align-items: start;
+    }
+
+    .playr-audio-timeline {
+        width: 95%;
+
+        padding-top: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        gap: 10px;
+    }
 }

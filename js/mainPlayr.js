@@ -37,7 +37,11 @@ if (localStorage.getItem('playr') == null) {
 
 function play() {
     document.getElementById('playr').play();
+
     Restart()
+    updataBigplayr()
+    
+    // getAudio()
 
     localStorage.setItem('audio_play', 1)
 
@@ -59,6 +63,21 @@ function pause() {
     document.getElementById('play-max').style.display = 'none'
     document.getElementById('pause-max').style.display = 'block'
 }
+
+
+
+
+
+
+function updataBigplayr() {
+    document.getElementById('big-playr').style.backgroundColor = localStorage.getItem('alibom_color');
+    document.getElementById('cover-img').src = localStorage.getItem('audio_icon_max');
+
+    document.getElementById('trek_name').innerHTML = localStorage.getItem('audio_name');
+    document.getElementById('trek_ispolniteli').innerHTML = localStorage.getItem('audio_after');
+}
+
+
 
 
 

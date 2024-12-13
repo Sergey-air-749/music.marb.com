@@ -166,6 +166,8 @@
         align-items: center;
         flex-direction: column;
 
+        height: 82vh;
+
         /* padding-bottom: 25vh; */
     }
 
@@ -177,6 +179,15 @@
         border-radius: 10px;
         /* box-shadow: #ffffff7d 0px 25px 55px 5px; */
         width: 300px;
+    }
+
+    .TextBox {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        font-family: Inter;
+        background-color: rgb(125, 125, 125);
+        height: 100vh;
     }
 
     .content .Text {
