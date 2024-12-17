@@ -155,6 +155,26 @@
 
 
 
+@media screen and (max-width: 800px) {
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    .alibom_img {
+        display: none;
+    }
+
+    .content .Text {
+        width: 100%;
+        padding: 20px;
+    }
+    
+}
 
 
 
@@ -223,9 +243,10 @@
         width: 300px;
     }
 
-    .content .Text {
-        width: 100%;
-        padding: 20px;
+   
+    .stroka {
+        color: #ffffffdb;
+        font-size: 40px;
+        font-weight: 800;
     }
-
 }
