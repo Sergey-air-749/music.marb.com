@@ -128,7 +128,7 @@
 
 
 .stroka {
-    color: #ffffffdb;
+    color: #ffffff;
     font-size: 48px;
     font-weight: 800;
 }
@@ -150,7 +150,6 @@
     background: none;
     border: none;
 }
-
 
 
 
@@ -178,7 +177,9 @@
 
 
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 700px) {
 
     .content {
         display: flex;
@@ -217,7 +218,7 @@
 
     .stroka {
         color: #ffffffd2;
-        font-size: 45px;
+        font-size: 40px;
         font-weight: 800;
     }
 }
@@ -243,10 +244,17 @@
         width: 300px;
     }
 
-   
+    .content .Text {
+        width: 100%;
+        padding: 20px;
+    }
+
+
     .stroka {
+        color: #ffffff;
         color: #ffffffdb;
         font-size: 40px;
         font-weight: 800;
     }
+    
 }

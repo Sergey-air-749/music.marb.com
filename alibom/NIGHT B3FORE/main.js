@@ -108,6 +108,24 @@ function music_3() {
 }
 
 
+function music_4() {
+    document.getElementById('playr').src = '/music.marb.com/music/3TERNITY/9b34cbc072ce7cfb9b12dbbd157e60c2fa1a898298d0aaebcba4173a5fb9d6d6.mp3';
+    document.getElementById('playr_img').src = icon;
+
+    audio_name.innerHTML = 'Навсегда'
+    audio_after.innerHTML = '3TERNITY'
+
+    localStorage.setItem('playr', document.getElementById('playr').src )
+    localStorage.setItem('audio_icon', icon)
+    localStorage.setItem('audio_icon_max', icon_max)
+    localStorage.setItem('audio_name', audio_name.innerHTML)
+    localStorage.setItem('audio_after', audio_after.innerHTML)
+    localStorage.setItem('alibom_name', alibom_name)
+
+    color()
+    play()
+}
+
 
 
 

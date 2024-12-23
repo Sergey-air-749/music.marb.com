@@ -116,7 +116,7 @@
 .timeline {
     height: 10px;
     appearance: none;
-    background: #e5e5e5;
+    background: #d7d7d7a3;
     outline: none;
     overflow: hidden;
 }
@@ -130,10 +130,11 @@
     appearance: none;
     width: 10px;
     height: 10px;
-    background: #0091ff;
+    background: #ffffff;
 
-    border: 5px solid #0091ff;
-    box-shadow: -405px 0 0 400px #0091ff;
+    border: 5px solid #ffffff;
+    border-radius: 100px;
+    box-shadow: -405px 0 0 400px #ffffff;
 
 
     cursor: pointer;
