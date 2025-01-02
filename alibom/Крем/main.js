@@ -4,10 +4,10 @@ const audio_name = document.getElementById('audio_name');
 const audio_after = document.getElementById('audio_after');
 
 
-let icon = '/music.marb.com/img/m1000x1000Крем (Пользовательское).jpeg';
-let icon_max = '/music.marb.com/img/m1000x1000Крем.png';
-audio_after.innerHTML = '3TERNITY, хочуспать'
-let alibom_name = 'Крем'
+let icon = '/music.marb.com/img/НаучиМеня (Пользовательское).jpg';
+let icon_max = '/music.marb.com/img/НаучиМеня.jpg';
+audio_after.innerHTML = 'YUNGWAY'
+let alibom_name = 'Научи меня'
 
 
 // function play() {
@@ -45,17 +45,17 @@ function share() {
 }
 
 function color() {
-    localStorage.setItem('alibom_color', 'rgb(202, 136, 171)')
+    localStorage.setItem('alibom_color', 'rgb(255, 173, 65)')
 }
 
 
 
 function music_1() {
-    document.getElementById('playr').src = '/music.marb.com/music/3TERNITY/26731.mp3';
+    document.getElementById('playr').src = '/music.marb.com/music/YUNGWAY/f267d6e29df698306c660508875c1a059d1b044bf7186358671085d3880f51ca.mp3';
     document.getElementById('playr_img').src = icon;
 
-    audio_name.innerHTML = 'Крем'
-    audio_after.innerHTML = '3TERNITY, хочуспать'
+    audio_name.innerHTML = 'Научи меня'
+    audio_after.innerHTML = 'YUNGWAY'
 
     localStorage.setItem('playr', document.getElementById('playr').src )
     localStorage.setItem('audio_icon', icon)
